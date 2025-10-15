@@ -7,13 +7,16 @@
         {
             Expression expression = new();
             Calculator calculator = new();
+            while (true)
+            {
+                Console.WriteLine("Introduceti expresia care doriti as fie calculata. If you want to exit the execution write stop");
+                expression.StringExpression = Console.ReadLine();
 
-            Console.WriteLine("Introduceti expresia care doriti as fie calculata");
-            expression.StringExpression = Console.ReadLine();
-            calculator.CalculatorExpression = expression;
+                if (expression.StringExpression == "stop") break;
 
-
-            calculator.Calculate();
+                calculator.CalculatorExpression = expression;
+                calculator.Calculate();
+            }
         }
     }
 }
