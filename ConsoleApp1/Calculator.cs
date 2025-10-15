@@ -5,22 +5,10 @@ namespace Exercitiul1
 {
     public class Calculator
     {
-        public Expression CalculatorExpression { get; set; } = new();
-
-
-        public void Calculate()
+        public static string Calculate(Expression expression)
         {
-            try
-            {
-                if (!CalculatorExpression.IsValidExpression()) throw new Exception("Expresie invalida. Introduceti alta\n");
-
-                var result = new DataTable().Compute(CalculatorExpression.StringExpression, null);
-                Console.WriteLine($"{CalculatorExpression.StringExpression} = {result}");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"A aparut o eroare.{e.Message}");
-            }
+            var result = new DataTable().Compute(expression.StringExpression, null)??throw new ConsoleApp1.Exceptions.EmptyCalculationException(expression.StringExpression);
+            return $"{expression} = {result.ToString()}";
         }
     }
 }
