@@ -9,11 +9,12 @@ namespace GradeEvaluator
 {
     public class Catalog
     {
-        public Dictionary<Student, (Materie, Note)> gradesCatalogue { get; set; }
+        public Dictionary<Student, List<Materie>> noteCatalog { get; set; }
 
         public int GetAverageGradesOfStudents(Student student)
         {
-            
+            if (!noteCatalog.ContainsKey(student)) throw new NonExistingStudentException(student.nume);
+
         }
     }
 }
