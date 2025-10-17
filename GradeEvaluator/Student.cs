@@ -10,5 +10,10 @@ namespace GradeEvaluator
     public class Student
     {
         public string nume {  get; set; } //nume prenume student
+
+        public Student(string nume)
+        {
+            this.nume = nume;
+        }
     }
 }

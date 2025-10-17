@@ -8,6 +8,7 @@ namespace GradeEvaluator.Exceptions
 {
     public class NoGradesException:Exception
     {
-        public NoGradesException() : base("Studentul trebuie sa aibe cel putin o nota trecuta pentru calcularea mediei");
+        public NoGradesException() : base("Studentul trebuie sa aibe cel putin o nota trecuta pentru calcularea mediei")
+        { }
     }
 }

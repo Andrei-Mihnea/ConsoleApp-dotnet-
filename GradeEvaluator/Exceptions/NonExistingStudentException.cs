@@ -8,6 +8,6 @@ namespace GradeEvaluator.Exceptions
 {
     public class NonExistingStudentException:Exception
     {
-        public NonExistingStudentException(string studentName, string univerisityName) : base($"The student ({studentName}) isn't studying at the university ({univerisityName})") { }
+        public NonExistingStudentException(string studentName) : base($"The student ({studentName}) isn't studying at this university ") { }
     }
 }
