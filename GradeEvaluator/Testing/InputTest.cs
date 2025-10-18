@@ -43,9 +43,9 @@ namespace GradeEvaluator.Testing
             Materie m9 = new("Ingineria Software", "Ciclul de viata al dezvoltarii software", n9);
             Materie m10 = new("Calcul Numeric", "Metode numerice si aproximari", n10);
 
-            PachetAn an1 = new(1);
-            PachetAn an2 = new(1);
-            PachetAn an3 = new(1);
+            PachetAn an1 = new(1, new List<Materie>());
+            PachetAn an2 = new(1, new List<Materie>());
+            PachetAn an3 = new(1, new List<Materie>());
 
             an1.AddMaterieToPachetAn(m1);
             an1.AddMaterieToPachetAn(m2);
@@ -96,7 +96,7 @@ namespace GradeEvaluator.Testing
                 Student student = new(studentName);
 
                 int year = ReadInt("Anul de studiu (1-3): ", min: 1, max: 3);
-                PachetAn pachet = new(year);
+                PachetAn pachet = new(year, new List<Materie>());
 
                 int numSubjects = ReadInt("Cate materii are acest student? ", min: 1);
 

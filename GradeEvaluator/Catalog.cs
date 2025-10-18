@@ -52,7 +52,7 @@ namespace GradeEvaluator
             return situatieFinala;
         }
 
-        public float GetAverageToAllMaterii(List<Materie> materii)
+        public float GetAverageToAllMaterii(IList<Materie> materii)
         {
             float medieGenerala = 0f;
             foreach(var materie in materii)

@@ -10,12 +10,12 @@ namespace GradeEvaluator
     public class PachetAn
     {
         public int an {  get; set; }
-        public List<Materie> materiiAn;
+        public IList<Materie> materiiAn;
 
-        public PachetAn(int an)
+        public PachetAn(int an, IList<Materie> materii)
         {
             this.an = an;
-            materiiAn = new();
+            materiiAn = materii;
         }
 
         public void AddMaterieToPachetAn(Materie materie)

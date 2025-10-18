@@ -8,9 +8,9 @@ namespace GradeEvaluator
 {
     public class Note
     {
-        public List<int> note;
+        public IList<int> note;
 
-        public Note(List<int> note)
+        public Note(IList<int> note)
         {
             if (note.Count == 0) throw new NoGradesException();
 
