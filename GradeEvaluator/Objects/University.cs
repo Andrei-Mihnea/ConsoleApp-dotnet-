@@ -7,7 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeEvaluator
+namespace GradeEvaluator.Objects
 {
     public class University
     {

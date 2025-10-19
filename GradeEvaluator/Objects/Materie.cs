@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using GradeEvaluator.Exceptions;
-namespace GradeEvaluator
+namespace GradeEvaluator.Objects
 {
     public class Materie
     {
@@ -17,8 +17,8 @@ namespace GradeEvaluator
         public Materie(string materie, string descriere, Note noteMaterie)
         {
             if (materie == null || descriere == null) throw new NullMemberGiven("Trebuie oferit un nume si o descrierie materiei obligatoriu");
-        
-            this.nume = materie;
+
+            nume = materie;
             this.descriere = descriere;
             this.noteMaterie = noteMaterie;
         }
@@ -30,12 +30,12 @@ namespace GradeEvaluator
 
         public string PrettyString()
         {
-            return $"Media la ({this.nume}) este de ({this.GetAverageFromMaterie()})\n";
+            return $"Media la ({nume}) este de ({GetAverageFromMaterie()})\n";
         }
 
         public bool IsSameMaterie(string numeMaterie)
         {
-            return this.nume == numeMaterie;
+            return nume == numeMaterie;
         }
 
 

@@ -8,6 +8,8 @@ namespace GradeEvaluator
         {
             string input = string.Empty;
 
+
+
             while (true)
             {
                 Console.WriteLine("Doriti sa continuati cu setul de date de test sau sa introduceti voi unul. " +

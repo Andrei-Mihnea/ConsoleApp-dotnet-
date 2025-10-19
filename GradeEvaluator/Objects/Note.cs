@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GradeEvaluator.Exceptions;
-namespace GradeEvaluator
+namespace GradeEvaluator.Objects
 {
     public class Note
     {
