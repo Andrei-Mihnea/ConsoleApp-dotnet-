@@ -15,6 +15,7 @@ namespace GradeEvaluator
         {
             if (!noteCatalog.ContainsKey(student)) throw new NonExistingStudentException(student.nume);
 
+            
         }
     }
 }
